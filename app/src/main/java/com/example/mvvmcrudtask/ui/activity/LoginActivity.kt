@@ -11,16 +11,21 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.mvvmcrudtask.R
 import com.example.mvvmcrudtask.databinding.ActivityLoginBinding
 import com.google.firebase.auth.FirebaseAuth
-import java.util.prefs.Preferences
 
 class LoginActivity : AppCompatActivity() {
 
     lateinit var loginBinding: ActivityLoginBinding
     var auth = FirebaseAuth.getInstance()
+    lateinit var sharedPreferences: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+
+        sharedPreferences = getSharedPreferences("loginPrefs", MODE_PRIVATE)
+//        if (isUserLoggedIn()) {
+//            navigateToDashboard()
+//        }
 
         loginBinding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(loginBinding.root)
@@ -29,13 +34,14 @@ class LoginActivity : AppCompatActivity() {
             var email = loginBinding.loginEmail.text.toString()
             var password = loginBinding.loginPassword.text.toString()
 
-            auth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
-                    task ->
+            auth.signInWithEmailAndPassword(email, password).addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     Toast.makeText(applicationContext, "Login Successful", Toast.LENGTH_LONG).show()
                     val intent = Intent(this@LoginActivity, DashboardActivity::class.java)
                     startActivity(intent)
                     finish()
+//                    saveLoginStatus()
+//                    navigateToDashboard()
                 } else {
                     Toast.makeText(applicationContext, task.exception?.message.toString(), Toast.LENGTH_LONG).show()
                 }
@@ -54,4 +60,20 @@ class LoginActivity : AppCompatActivity() {
             insets
         }
     }
+
+//    private fun isUserLoggedIn(): Boolean {
+//        return sharedPreferences.getBoolean("isLoggedIn", false)
+//    }
+//
+//    private fun saveLoginStatus() {
+//        val editor = sharedPreferences.edit()
+//        editor.putBoolean("isLoggedIn", true)
+//        editor.apply()
+//    }
+//
+//    private fun navigateToDashboard() {
+//        val intent = Intent(this@LoginActivity, DashboardActivity::class.java)
+//        startActivity(intent)
+//        finish()
+//    }
 }

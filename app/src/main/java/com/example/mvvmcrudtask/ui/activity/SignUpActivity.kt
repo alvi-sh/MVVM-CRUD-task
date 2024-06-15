@@ -31,6 +31,8 @@ class SignUpActivity : AppCompatActivity() {
 
             if (username.isEmpty() || email.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
                 Toast.makeText(applicationContext, "All fields must be filled", Toast.LENGTH_LONG).show()
+            } else if (password.length < 8) {
+                Toast.makeText(applicationContext, "Password must be at least 8 characters long", Toast.LENGTH_LONG).show()
             } else if (password == confirmPassword) {
                 auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener { task ->
                     if (task.isSuccessful) {
