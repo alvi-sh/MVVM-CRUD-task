@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "208393638540",
+    "firebase_url": "https://mvvm-crud-ab75d-default-rtdb.firebaseio.com",
+    "project_id": "mvvm-crud-ab75d",
+    "storage_bucket": "mvvm-crud-ab75d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:208393638540:android:5105d1371a0f2126ba21a9",
+        "android_client_info": {
+          "package_name": "com.example.mvvmcrudtask"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQME8Rzax3EmgrnRhvd1L2x0m8kINK75Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
