@@ -90,7 +90,7 @@
         android:ems="10"
         android:fontFamily="@font/merienda_one"
         android:hint="Password"
-        android:inputType="text"
+        android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="@+id/loginImageView"
         app:layout_constraintStart_toStartOf="@+id/loginImageView"
         app:layout_constraintTop_toBottomOf="@+id/loginEmail" />

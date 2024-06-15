@@ -32,7 +32,7 @@
         app:layout_constraintTop_toBottomOf="@+id/signupImageView" />
 
     <EditText
-        android:id="@+id/username"
+        android:id="@+id/signupUsername"
         android:layout_width="255dp"
         android:layout_height="45dp"
         android:layout_marginTop="15dp"
@@ -55,7 +55,7 @@
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="@+id/signupImageView"
         app:layout_constraintStart_toStartOf="@+id/signupImageView"
-        app:layout_constraintTop_toBottomOf="@+id/username" />
+        app:layout_constraintTop_toBottomOf="@+id/signupUsername" />
 
     <EditText
         android:id="@+id/signupPassword"
@@ -65,7 +65,7 @@
         android:ems="10"
         android:fontFamily="@font/merienda_one"
         android:hint="Password"
-        android:inputType="text"
+        android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="@+id/signupImageView"
         app:layout_constraintStart_toStartOf="@+id/signupImageView"
         app:layout_constraintTop_toBottomOf="@+id/signupEmail" />
@@ -78,7 +78,7 @@
         android:ems="10"
         android:fontFamily="@font/merienda_one"
         android:hint="Confirm Password"
-        android:inputType="text"
+        android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="@+id/signupImageView"
         app:layout_constraintStart_toStartOf="@+id/signupImageView"
         app:layout_constraintTop_toBottomOf="@+id/signupPassword" />
