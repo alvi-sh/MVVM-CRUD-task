@@ -8,7 +8,7 @@
     tools:context=".ui.activity.SignUpActivity">
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/signupImageView"
         android:layout_width="357dp"
         android:layout_height="249dp"
         android:layout_marginStart="27dp"
@@ -20,19 +20,19 @@
         app:srcCompat="@drawable/signupimage" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/signupTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="9dp"
         android:fontFamily="@font/merienda_one"
         android:text="SIGN UP"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/imageView2"
-        app:layout_constraintStart_toStartOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintEnd_toEndOf="@+id/signupImageView"
+        app:layout_constraintStart_toStartOf="@+id/signupImageView"
+        app:layout_constraintTop_toBottomOf="@+id/signupImageView" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/username"
         android:layout_width="255dp"
         android:layout_height="45dp"
         android:layout_marginTop="15dp"
@@ -40,12 +40,12 @@
         android:fontFamily="@font/merienda_one"
         android:hint="Username"
         android:inputType="text"
-        app:layout_constraintEnd_toEndOf="@+id/imageView2"
-        app:layout_constraintStart_toStartOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintEnd_toEndOf="@+id/signupImageView"
+        app:layout_constraintStart_toStartOf="@+id/signupImageView"
+        app:layout_constraintTop_toBottomOf="@+id/signupTextView" />
 
     <EditText
-        android:id="@+id/editTextText2"
+        android:id="@+id/signupEmail"
         android:layout_width="255dp"
         android:layout_height="45dp"
         android:layout_marginTop="10dp"
@@ -53,12 +53,12 @@
         android:fontFamily="@font/merienda_one"
         android:hint="E-mail"
         android:inputType="text"
-        app:layout_constraintEnd_toEndOf="@+id/imageView2"
-        app:layout_constraintStart_toStartOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+        app:layout_constraintEnd_toEndOf="@+id/signupImageView"
+        app:layout_constraintStart_toStartOf="@+id/signupImageView"
+        app:layout_constraintTop_toBottomOf="@+id/username" />
 
     <EditText
-        android:id="@+id/editTextText3"
+        android:id="@+id/signupPassword"
         android:layout_width="255dp"
         android:layout_height="45dp"
         android:layout_marginTop="10dp"
@@ -66,12 +66,12 @@
         android:fontFamily="@font/merienda_one"
         android:hint="Password"
         android:inputType="text"
-        app:layout_constraintEnd_toEndOf="@+id/imageView2"
-        app:layout_constraintStart_toStartOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
+        app:layout_constraintEnd_toEndOf="@+id/signupImageView"
+        app:layout_constraintStart_toStartOf="@+id/signupImageView"
+        app:layout_constraintTop_toBottomOf="@+id/signupEmail" />
 
     <EditText
-        android:id="@+id/editTextText4"
+        android:id="@+id/signupConfirmPassword"
         android:layout_width="255dp"
         android:layout_height="45dp"
         android:layout_marginTop="10dp"
@@ -79,45 +79,47 @@
         android:fontFamily="@font/merienda_one"
         android:hint="Confirm Password"
         android:inputType="text"
-        app:layout_constraintEnd_toEndOf="@+id/imageView2"
-        app:layout_constraintStart_toStartOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText3" />
+        app:layout_constraintEnd_toEndOf="@+id/signupImageView"
+        app:layout_constraintStart_toStartOf="@+id/signupImageView"
+        app:layout_constraintTop_toBottomOf="@+id/signupPassword" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/signupButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="23dp"
         android:fontFamily="@font/merienda_one"
         android:text="Sign Up"
-        app:layout_constraintEnd_toEndOf="@+id/imageView2"
-        app:layout_constraintStart_toStartOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText4" />
+        app:layout_constraintEnd_toEndOf="@+id/signupImageView"
+        app:layout_constraintStart_toStartOf="@+id/signupImageView"
+        app:layout_constraintTop_toBottomOf="@+id/signupConfirmPassword" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/created"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="32dp"
         android:fontFamily="@font/merienda_one"
         android:text="Already have an account?"
-        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/signupImageView"
         app:layout_constraintHorizontal_bias="0.276"
-        app:layout_constraintStart_toStartOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintStart_toStartOf="@+id/signupImageView"
+        app:layout_constraintTop_toBottomOf="@+id/signupButton" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/gotoLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="32dp"
         android:fontFamily="@font/merienda_one"
-        android:text="Login here"
+        android:text="Login"
         android:textColor="#3F51B5"
+        android:textSize="14sp"
         android:textStyle="bold|italic"
-        app:layout_constraintEnd_toEndOf="@+id/imageView2"
-        app:layout_constraintHorizontal_bias="0.848"
-        app:layout_constraintStart_toStartOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintEnd_toEndOf="@+id/signupImageView"
+        app:layout_constraintHorizontal_bias="0.73"
+        app:layout_constraintStart_toStartOf="@+id/signupImageView"
+        app:layout_constraintTop_toBottomOf="@+id/signupButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
